@@ -155,6 +155,11 @@ header h1 {
   background-image: url(../img/MG_0881.jpg);
 }
 
+#gallery-top-content {
+  background-image: url(../img/gal.jpg);
+  min-height: 100px;
+}
+
 #contact-top-content {
   background-image: url(../img/Andrassy2.jpg);
   background-position: top;
@@ -177,3 +182,23 @@ header h1 {
   padding-left: 2em;
 }
 
+.popup-gallery {
+  margin-top: 40px;
+}
+
+.popup-gallery a {
+  display: block;
+  width: 90%;
+  margin: 50px auto;  
+}
+
+.popup-gallery .left, 
+.popup-gallery .rigth {
+  width: 50%;
+  float: left;
+}
+
+.popup-gallery img {
+  width: 100%;
+  border: 1px solid #571219;
+}
