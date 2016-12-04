@@ -1,8 +1,13 @@
 ﻿body {
     font-size: 15px;
-    background-color: #fefee1;
+    background-color: #fffff0;
     color: #571219;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+a {
+  text-decoration: none;
+  color: #571219;
 }
 
 .content {
@@ -26,3 +31,149 @@
   margin-top: 2.5em;
   font-weight: bold;
 }
+
+header {
+  width: 100%;
+  height: 220px;
+}
+
+header,
+.top-content {
+  border-bottom: 1px solid #571219;
+}
+
+header a {
+  display: inline-block;
+  line-height: 220px;
+}
+
+#logo {
+  display: block;
+  float: left;
+}
+
+header::after{
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+nav {
+  float: right;
+  margin-right: 45px;
+}
+
+header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+header li {
+    float: left;
+}
+
+header li a {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 220px;
+    padding: 0 16px;
+    text-transform: uppercase;
+}
+header li a:hover {
+  background: #571219;
+  color: #fffff0;
+}
+
+header img {
+  display: inline-block;
+    padding-left: 80px;
+    height: 180px;
+    vertical-align: middle;
+}
+header h1 {
+  display: none;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 220px;
+    padding-left: 30px;
+}
+
+#top-content {
+    text-align: center;
+    color: #fff;
+    min-height: 80vh;
+    position: relative;
+    width: 100%;
+    background-image: url(../img/Andrassy15.jpg);
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+#bottom-content {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+  line-height: 1.5em;
+  margin-bottom: 60px;
+}
+
+#bottom-content h3 {
+  margin-top: 70px;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+#bottom-content p.first {
+  margin-top: 40px;
+}
+
+#bottom-content p {
+  margin-top: 20px;
+}
+
+.top-content {
+    text-align: center;
+    color: #fff;
+    min-height: 330px;
+    position: relative;
+    width: 100%;    
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+#offer-top-content {
+  background-image: url(../img/MG_0881.jpg);
+}
+
+#contact-top-content {
+  background-image: url(../img/Andrassy2.jpg);
+  background-position: top;
+}
+
+.top-content h2 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 40px;
+  opacity: 0.8;
+}
+
+#bottom-content .fa {
+  width: 2em;
+  display: inline-block;
+}
+
+#bottom-content li.placeholder {
+  padding-left: 2em;
+}
+
