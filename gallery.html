@@ -6,21 +6,21 @@ title: Galerie - Bencze Design
 <div id="gallery-top-content" class="top-content">
     <h2>Galerie</h2>
 </div>
-<div id="bottom-content">
+<div class="bottom-content">
     <div class="popup-gallery">
     
         <div class="left">
-        {% for image in site.static_files %}
+        {% for image in site.static_files | sort: 'image.path' %}
         {% if image.path contains 'img/gallery/left' %}
-            <a href="{{ image.path }}"><img src="{{ image.path }}"  ></a>
+            <a href="{{ image.path }}"><img src="{{ image.path }}" ></a>
         {% endif %}
         {% endfor %}
         </div>
 
         <div class="right">
-        {% for image in site.static_files %}
+        {% for image in site.static_files | sort: 'image.path' %}
         {% if image.path contains 'img/gallery/right' %}
-            <a href="{{ image.path }}"><img src="{{ image.path }}"  ></a>
+            <a href="{{ image.path }}"><img src="{{ image.path }}" ></a>
         {% endif %}
         {% endfor %}
         </div>

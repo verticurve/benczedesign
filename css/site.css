@@ -1,6 +1,6 @@
 ﻿body {
     font-size: 15px;
-    background-color: #fffff0;
+    background-color: #f5f5f5;
     color: #571219;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
@@ -102,21 +102,7 @@ header h1 {
     padding-left: 30px;
 }
 
-#top-content {
-    text-align: center;
-    color: #fff;
-    min-height: 80vh;
-    position: relative;
-    width: 100%;
-    background-image: url(../img/Andrassy15.jpg);
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-#bottom-content {
+.bottom-content {
   width: 80%;
   margin: 0 auto;
   display: block;
@@ -124,18 +110,25 @@ header h1 {
   margin-bottom: 60px;
 }
 
-#bottom-content h3 {
-  margin-top: 70px;
+.bottom-content h3 {
+  margin-top: 40px;
   font-size: 24px;
-  margin-bottom: 30px;
 }
 
-#bottom-content p.first {
+.bottom-content p.first {
   margin-top: 40px;
 }
 
-#bottom-content p {
+.bottom-content p,
+.bottom-content ul {
   margin-top: 20px;
+}
+
+.bottom-content li::before {
+  font-family: FontAwesome;
+  content: "\f105";
+  padding-left: 10px;
+  padding-right: 7px;
 }
 
 .top-content {
@@ -151,17 +144,24 @@ header h1 {
     -o-background-size: cover;
 }
 
+#front-top-content {
+  background-image: url(../img/main.jpg);
+  min-height: 80vh;
+}
+
 #offer-top-content {
-  background-image: url(../img/MG_0881.jpg);
+  background-image: url(../img/angebot.jpg);
 }
 
 #gallery-top-content {
-  background-image: url(../img/gal.jpg);
+  background-image: url(../img/pattern_200.jpg);
+  background-repeat: repeat-x;
+  background-size: contain;
   min-height: 80px;
 }
 
 #contact-top-content {
-  background-image: url(../img/Andrassy2.jpg);
+  background-image: url(../img/contact.jpg);
   background-position: top;
 }
 
@@ -173,13 +173,33 @@ header h1 {
   opacity: 0.8;
 }
 
-#bottom-content .fa {
+.bottom-content .fa {
   width: 2em;
   display: inline-block;
 }
 
-#bottom-content li.placeholder {
+.bottom-content li.placeholder {
   padding-left: 2em;
+}
+
+#offer-bottom-content ul {
+  margin-top: 5px;
+}
+
+#contact-bottom-content li::before {
+  content: "";
+}
+
+#contact-bottom-content h3.name {
+  margin-top: 70px;
+}
+
+#contact-bottom-content .profile-container {
+  text-align: center;
+}
+
+#contact-bottom-content img.profile {
+  width: 200px;
 }
 
 .popup-gallery {
@@ -192,13 +212,13 @@ header h1 {
   margin: 50px auto;  
 }
 
-.popup-gallery .left, 
-.popup-gallery .right {
+.bottom-content .left, 
+.bottom-content .right {
   width: 50%;
   float: left;
 }
 
-.popup-gallery img {
+.bottom-content img {
   width: 100%;
   border: 1px solid #571219;
 }
