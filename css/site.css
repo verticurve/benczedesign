@@ -253,34 +253,31 @@ label {
   display: block;
 }
 
-button {
+#contact-bottom-content button {
   display: block;
   margin: 0 20px 0 0;
   padding: 5px 15px;
   font-size: 16px;
   box-shadow: none;
   border-radius: 0;
-}
-
-button:focus {
-  outline: none
-}
-
-button {
   color: #fff;
   background-color: #571219;
   text-shadow: -1px 1px #781922;
   border: none;
 }
 
-button:hover,
-button.hover {
+#contact-bottom-content button:focus {
+  outline: none
+}
+
+#contact-bottom-content button:hover,
+#contact-bottom-content button.hover {
   background-color: #a82330;
   text-shadow: -1px 1px #470f14;
 }
 
-button:active,
-button.active {
+#contact-bottom-content button:active,
+#contact-bottom-content button.active {
   background-color: #470f14;
   text-shadow: -1px 1px #360b10;
 }

@@ -10,7 +10,7 @@ title: Galerie - Bencze Design
     <div class="popup-gallery">
     
         <div class="left">
-        {% for image in site.static_files | sort: 'image.path' %}
+        {% for image in site.static_files sort: 'image.path' %}
         {% if image.path contains 'img/gallery/left' %}
             <a href="{{ image.path }}"><img src="{{ image.path }}" ></a>
         {% endif %}
@@ -18,7 +18,7 @@ title: Galerie - Bencze Design
         </div>
 
         <div class="right">
-        {% for image in site.static_files | sort: 'image.path' %}
+        {% for image in site.static_files sort: 'image.path' %}
         {% if image.path contains 'img/gallery/right' %}
             <a href="{{ image.path }}"><img src="{{ image.path }}" ></a>
         {% endif %}
