@@ -113,7 +113,8 @@ header h1 {
   margin-bottom: 60px;
 }
 
-.bottom-content h3 {
+.bottom-content h3,
+.bottom-content img.profile  {
   margin-top: 40px;
   font-size: 24px;
 }
@@ -199,9 +200,10 @@ header h1 {
 
 #contact-bottom-content h3.form {
   margin-bottom: 30px;
+  margin-top: 0px;
 }
 
-#contact-bottom-content .profile-container {
+#contact-bottom-content .text-center {
   text-align: center;
 }
 
@@ -233,6 +235,7 @@ header h1 {
     margin-top: 30px;
     margin-bottom: 10px;
 }
+#contact-bottom-content:after,
 .gallery-table:after{
     content: '';
     display: block;
@@ -254,6 +257,15 @@ header h1 {
 .bottom-content .left, 
 .bottom-content .right {
   width: 50%;
+  float: left;
+}
+
+.bottom-content .left70 {
+  width: 70%;
+  float: left;
+}
+.bottom-content .right30 {
+  width: 30%;
   float: left;
 }
 
