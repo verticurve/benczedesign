@@ -300,6 +300,7 @@ a.nav-link:hover {
     background-color: #571219;
     text-shadow: -1px 1px #781922;
     border: none;
+    margin-top: 20px;
 }
 
 #contact-bottom-content button:focus {
