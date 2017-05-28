@@ -1,106 +1,30 @@
 ---
-layout: page
+layout: gallery
 title: Galerie - Bencze Design
 ---
 
-{% assign categories = "wohnzimmer, esszimmerkuche, entreeflur, schlafzimmer, jugendkinderzimmer, burogastezimmer, badzimmer" | split: ", " %}
-{% assign titles = "Wohnzimmer, Esszimmer-K&#252;che, Entree-Flur, Schlafzimmer, Jugend-Kinderzimmer, B&#252;ro-G&#228;stezimmer, Badzimmer" | split: ", " %}
 <div id="gallery-top-content" class="top-content">
     <h2>Galerie</h2>
 </div>
-<div class="bottom-content">
-    {% for category in categories %}
+<div class="bottom-content">{% for category in site.data.gallery_categories %}
     <div class="gallery">
-        <h3>{{ titles[forloop.index0] }}</h3>
-        <div class="gallery-table">
-            {% for image in site.static_files %}
-            {% assign basePath = '/img/gallery/' | append: {{category}} | append: '/small' %} 
-            {% if image.path contains basePath %}
+        <h3>{{ category.title }}</h3>
+        <div class="gallery-table">{% 
+            for image in site.static_files %}{% 
+                assign basePath = '/img/gallery/' | append: {{category.folder}} | append: '/small' %}{% 
+                if image.path contains basePath %}
             <div class="gallery-cell-item">
                 <img src="{{ image.path }}">
-            </div>
-            {% endif %}
-            {% endfor %}
+            </div>{% 
+                endif %}{%
+            endfor %}
         </div>
-        <a class="more" href="#" onclick="openGallery({{category}});">Mehr <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-    </div>
-    {% endfor %}
+        <a class="more" href="#" onclick="openGallery({{category.folder}});">Mehr <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+    </div>{% endfor %}
 </div>
 
-<!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-    <!-- Background of PhotoSwipe.
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-        <!-- Container that holds slides.
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-            <div class="pswp__top-bar">
-                <!--  Controls are self-explanatory. Order can be changed. -->
-                <div class="pswp__counter"></div>
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-        </div>
-    </div>
-</div>
+{% include photoswipe.html %}
 
 <script src="{{ site.github.url }}/js/photoswipe.min.js"></script>
 <script src="{{ site.github.url }}/js/photoswipe-ui-default.min.js"></script>
 <script src="{{ site.github.url }}/js/gallery.js"></script>
-
-<script>
-    
-    {% for category in categories %}
-    var {{category}} = [
-        {% for image in site.static_files %}
-        {% assign basePath = '/img/gallery/' | append: {{category}} | append: '/large' %}  
-        {% if image.path contains basePath %}
-        {% assign path = image.path %}            
-        {% assign folders = path | split: "/" | reverse %}
-        {% assign sizeX = folders[1] | split: "x" | first %}
-        {% assign sizeY = folders[1] | split: "x" | last %}        
-            { src: '{{ path }}', w: {{sizeX}}, h: {{sizeY}} },
-        {% endif %}
-        {% endfor %}
-    ];
-    {% endfor %}
-</script>
-
-<!-- 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
-<script src="{{ site.github.url }}/js/jquery.magnific-popup.js"></script>
-<script src="{{ site.github.url }}/js/popup.js"></script>-->

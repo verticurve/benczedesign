@@ -1,0 +1,20 @@
+﻿- folder: wohnzimmer
+  title: Wohnzimmer
+  
+- folder: esszimmerkuche
+  title: Esszimmer-K&#252;che
+  
+- folder: entreeflur
+  title: Entree-Flur
+  
+- folder: schlafzimmer
+  title: Schlafzimmer
+
+- folder: jugendkinderzimmer
+  title: Jugend-Kinderzimmer
+
+- folder: burogastezimmer
+  title: B&#252;ro-G&#228;stezimmer
+
+- folder: badzimmer
+  title: Badzimmer
