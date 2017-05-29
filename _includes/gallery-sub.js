@@ -12,4 +12,4 @@ var {{category.folder}} = [{%
 endfor %}
 ];{% 
 endfor %}
-{% include gallery.js %}
+{% include photoswipe.min.js %}{% include photoswipe-ui-default.min.js %}{% include gallery.js %}
