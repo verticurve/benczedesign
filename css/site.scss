@@ -8,7 +8,8 @@ $header-height: 220px;
 $bottom-width: 80%;
 
 $gallery-width: 90%;
-$gallery-img-width: 75%;
+$gallery-img-width: 70%;
+$gallery-more-width: 100% - (100% - $gallery-img-width) / 2;
 
 /*Only needed form the template page*/
 .content {
@@ -208,7 +209,7 @@ a.nav-link:hover {
     }
 
     a.more {
-        width: $gallery-width - 3%;
+        width: $gallery-more-width;
     }
 
     h3 {

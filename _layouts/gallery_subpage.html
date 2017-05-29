@@ -11,7 +11,7 @@ title: Galerie - Bencze Design
         <h3>{{ category.title }}</h3>
         <div class="gallery-table">{% 
             for image in site.static_files %}{% 
-                assign basePath = '/img/gallery/' | append: {{category.folder}} | append: '/small' %}{% 
+                assign basePath = '/img/gallery/' | append: {{page.gallery-folder}} | append: '/' | append: {{category.folder}} | append: '/small' %}{% 
                 if image.path contains basePath %}
             <div class="gallery-cell-item">
                 <img src="{{ image.path }}">
@@ -27,4 +27,4 @@ title: Galerie - Bencze Design
 
 <script src="{{ site.github.url }}/js/photoswipe.min.js"></script>
 <script src="{{ site.github.url }}/js/photoswipe-ui-default.min.js"></script>
-<script src="{{ site.github.url }}/js/gallery.js"></script>
+<script src="{{ site.github.url }}/js/gallery-{{page.gallery-folder}}.js"></script>

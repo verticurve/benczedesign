@@ -1,20 +1,26 @@
 ﻿- folder: wohnzimmer
   title: Wohnzimmer
   
-- folder: esszimmerkuche
+- folder: esszimmer
   title: Esszimmer-K&#252;che
   
-- folder: entreeflur
-  title: Entree-Flur
-  
-- folder: schlafzimmer
+- folder: schlaf
   title: Schlafzimmer
 
-- folder: jugendkinderzimmer
-  title: Jugend-Kinderzimmer
+- folder: jugend
+  title: Jugendzimmer
 
-- folder: burogastezimmer
+- folder: buro
   title: B&#252;ro-G&#228;stezimmer
 
-- folder: badzimmer
-  title: Badzimmer
+- folder: bad
+  title: Bad, Dusche
+
+- folder: entree
+  title: Entree-Gang
+
+- folder: sitzplatz
+  title: Sitzplatz
+
+- folder: hobby
+  title: Hobby, TV Raum
