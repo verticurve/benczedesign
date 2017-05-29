@@ -1,0 +1,30 @@
+---
+layout: gallery
+title: Galerie - Bencze Design
+---
+
+<div id="gallery-top-content" class="top-content">
+    <h2>Galerie - {{page.gallery-name}}</h2>
+</div>
+<div class="bottom-content">{% for category in site.data.gallery_categories %}
+    <div class="gallery">
+        <h3>{{ category.title }}</h3>
+        <div class="gallery-table">{% 
+            for image in site.static_files %}{% 
+                assign basePath = '/img/gallery/' | append: {{category.folder}} | append: '/small' %}{% 
+                if image.path contains basePath %}
+            <div class="gallery-cell-item">
+                <img src="{{ image.path }}">
+            </div>{% 
+                endif %}{%
+            endfor %}
+        </div>
+        <a class="more" href="#" onclick="openGallery({{category.folder}});">Mehr <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+    </div>{% endfor %}
+</div>
+
+{% include photoswipe.html %}
+
+<script src="{{ site.github.url }}/js/photoswipe.min.js"></script>
+<script src="{{ site.github.url }}/js/photoswipe-ui-default.min.js"></script>
+<script src="{{ site.github.url }}/js/gallery.js"></script>
