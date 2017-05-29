@@ -1,4 +1,9 @@
-﻿/*Only needed form the template page*/
+---
+---
+
+@import "reset";
+
+/*Only needed form the template page*/
 .content {
     position: absolute;
     width: 100%;
@@ -207,21 +212,22 @@ a.nav-link:hover {
     width: 200px;
 }
 
-.gallery,
-.popup-gallery {
+.gallery {
     margin-top: 40px;
 }
 
-.gallery a,
-.popup-gallery a {
-    display: block;
-    width: 90%;
-    margin: 30px auto 10px;
+.gallery h3,
+.gallery a.more {
+    display: block;    
+    margin: 0 auto;
 }
 
 .gallery a.more {
-    margin: 0 auto 0;
-    clear: both;
+    width: 87%;
+}
+
+.gallery h3 {
+    width: 90%;
 }
 
 .gallery-table {
@@ -237,7 +243,7 @@ a.nav-link:hover {
 }
 
 .bottom-content .gallery-cell-item img {
-    width: 90%;
+    width: 75%;
     margin: 0 auto;
     display: block;
 }

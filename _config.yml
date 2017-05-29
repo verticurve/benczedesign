@@ -1,2 +1,4 @@
 title: Bencze Design
 exclude: [run.bat, some.md, Gemfile, Gemfile.lock]
+sass:
+  style: compressed
