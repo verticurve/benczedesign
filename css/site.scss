@@ -166,8 +166,18 @@ a.nav-link:hover {
 }
 
 #front-top-content {
-    background-image: url(../img/main.jpg);
+    background-image: url(../img/gallery/referenzwohnung/esszimmer/large/1600x1067/EZ1.jpg);
+    transition: background-image 1s ease-in-out;
     min-height: 80vh;
+    animation-name: chg_bg;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes chg_bg {
+    0%, 30%    {background-image: url(../img/gallery/referenzwohnung/esszimmer/large/1600x1067/EZ1.jpg);}
+    33%, 63%   {background-image: url(../img/gallery/referenzwohnung/wohnzimmer/large/1600x1067/WOZ1.jpg);}
+    66%, 99%   {background-image: url(../img/gallery/referenzwohnung/schlaf/large/1600x1067/SchZ3.jpg);}
 }
 
 #offer-top-content {
