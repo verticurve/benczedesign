@@ -3,24 +3,25 @@
   
 - folder: esszimmer
   title: Esszimmer-K&#252;che
-  
-- folder: schlaf
-  title: Schlafzimmer
 
 - folder: jugend
   title: Jugendzimmer
 
+- folder: schlaf
+  title: Schlafzimmer
+
 - folder: buro
   title: B&#252;ro-G&#228;stezimmer
-
-- folder: bad
-  title: Bad, Dusche
 
 - folder: entree
   title: Entree-Gang
 
-- folder: sitzplatz
-  title: Sitzplatz
+- folder: bad
+  title: Bad, Dusche
 
 - folder: hobby
   title: Hobby, TV Raum
+
+- folder: sitzplatz
+  title: Sitzplatz
+
