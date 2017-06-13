@@ -1,4 +1,4 @@
 ---
 gallery-folder: referenzwohnung
 ---
-{% include gallery-sub.js %}
+{% assign data = site.data.gallery_referenzwohnung %}{% include gallery-sub.js %}

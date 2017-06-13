@@ -1,4 +1,4 @@
-{% for category in site.data.gallery_categories %}
+{% for category in data %}
 var {{category.folder}} = [{% 
     for image in site.static_files %}{% 
         assign basePath = '/img/gallery/' | append: {{page.gallery-folder}} | append: '/' | append: {{category.folder}} | append: '/large' %}{% 
