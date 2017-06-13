@@ -6,23 +6,30 @@ title: Galerie - Bencze Design
 <div id="gallery-top-content" class="top-content">
     <h2>Galerie</h2>
 </div>
-<div class="bottom-content">{% for category in site.data.gallery_referenzwohnung %}
+<div class="bottom-content">
     <div class="gallery">
-        <h3>{{ category.title }}</h3>
-        <div class="gallery-table">{% 
-            for image in site.static_files %}{% 
-                assign basePath = '/img/gallery/' | append: {{category.folder}} | append: '/small' %}{% 
-                if image.path contains basePath %}
+        <h3>Referenzwohnung</h3>
+        <div class="gallery-table">
             <div class="gallery-cell-item">
-                <img src="{{ image.path }}">
-            </div>{% 
-                endif %}{%
-            endfor %}
+                <img src="/img/gallery/referenzwohnung/wohnzimmer/small/WOZ1.jpg">
+            </div>
+            <div class="gallery-cell-item">
+                <img src="/img/gallery/referenzwohnung/jugend/small/JZ08.jpg">
+            </div>
         </div>
-        <a class="more" href="#" onclick="openGallery({{category.folder}});">Mehr <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-    </div>{% endfor %}
+        <a class="more" href="{{ site.github.url }}/gallery-referenzwohnung.html">Mehr <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+    </div>
+    <div class="gallery">
+        <h3>Stadtwohnung</h3>
+        <div class="gallery-table">
+            <div class="gallery-cell-item">
+                <img src="/img/gallery/stadtwohnung/Wohnzimmer/small/WZ13.jpg">
+            </div>
+            <div class="gallery-cell-item">
+                <img src="/img/gallery/stadtwohnung/Schlafzimmer/small/SZ21.jpg">
+            </div>
+        </div>
+        <a class="more" href="{{ site.github.url }}/gallery-stadtwohnung.html">Mehr <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+    </div>
+
 </div>
-
-{% include photoswipe.html %}
-
-<script src="{{ site.github.url }}/js/gallery.js"></script>
