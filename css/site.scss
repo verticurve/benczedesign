@@ -268,6 +268,13 @@ a.nav-link:hover {
     border: 1px solid $primary-color;
 }
 
+.text-center {
+    text-align: center;
+}
+img.profile {
+    width: 200px;
+}
+
 #contact-bottom-content {
 
     li::before {
@@ -281,15 +288,7 @@ a.nav-link:hover {
     h3.form {
         margin-bottom: 30px;
         margin-top: 0px;
-    }
-
-    .text-center {
-        text-align: center;
-    }
-
-    img.profile {
-        width: 200px;
-    }
+    }    
 
     input,
     textarea {
