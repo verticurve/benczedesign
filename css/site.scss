@@ -211,6 +211,7 @@ a.nav-link:hover {
 
 .gallery {
     margin-top: 40px;
+    width: 100%;
 
     h3,
     a.more {
@@ -230,6 +231,7 @@ a.nav-link:hover {
         width: 100%;
         margin-top: 30px;
         margin-bottom: 10px;
+        display: inline-block;
     }
 
     .gallery-cell-item {
