@@ -174,6 +174,15 @@ a.nav-link:hover {
     animation-iteration-count: infinite;
 }
 
+/*preload images*/
+#front-bottom-content {
+    background-position-x: -9999px;
+    background-position-y: -9999px;
+    background-repeat: no-repeat;
+    animation-name: chg_bg;
+    animation-duration: 2s;
+}
+
 @keyframes chg_bg {
     0%, 30%    {background-image: url(../img/gallery/referenzwohnung/esszimmer/large/1600x1067/EZ1.jpg);}
     33%, 63%   {background-image: url(../img/gallery/referenzwohnung/wohnzimmer/large/1600x1067/WOZ1.jpg);}
