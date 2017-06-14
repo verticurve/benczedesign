@@ -7,10 +7,6 @@ $primary-color: #571219;
 $header-height: 220px;
 $bottom-width: 80%;
 
-$gallery-width: 90%;
-$gallery-img-width: 70%;
-$gallery-more-width: 100% - (100% - $gallery-img-width) / 2;
-
 /*Only needed form the template page*/
 .content {
     position: absolute;
@@ -60,8 +56,7 @@ header,
 }
 
 header:after,
-#contact-bottom-content:after,
-.gallery-table:after {
+#contact-bottom-content:after {
     clear: both;
     content: '';
     display: block;
@@ -218,40 +213,63 @@ a.nav-link:hover {
     margin-top: 5px;
 }
 
-.gallery {
-    margin-top: 40px;
-    width: 100%;
+.gallery-card {
+    float: left;
+
+    $img-width: 33%;
+    $img-margin: 25% - $img-width / 2;
+
+    &.c2 {
+        width: 100%;
+
+        img {
+            width: $img-width;
+            margin: 0 $img-margin;
+        }
+
+        h3 {
+            margin-left: $img-margin - 2%;
+        }
+
+        a.more {
+            margin-left: $img-margin + 2%;
+        }
+    }
+    &.c1 {
+        width: 50%;
+
+        img {
+            width: $img-width * 2;
+            margin: 0 50% - $img-width;
+        }
+
+        h3 {
+            margin-left: 50% - $img-width - 4%;
+        }
+
+        a.more {
+            margin-left: 50% - $img-width + 4%;
+        }
+    }
 
     h3,
     a.more {
-        display: block;    
-        margin: 0 auto;
+        display: block;
     }
 
     a.more {
-        width: $gallery-more-width;
+        margin-bottom: 20px;
     }
-
-    h3 {
-        width: $gallery-width;
-    }
-
-    .gallery-table {
+    
+    .gallery-img-container {
         width: 100%;
         margin-top: 30px;
         margin-bottom: 10px;
         display: inline-block;
-    }
-
-    .gallery-cell-item {
-        float: left;
-        width: 50%;
-        margin: 5px 0;
 
         img {
-            width: $gallery-img-width;
-            margin: 0 auto;
-            display: block;
+            float: left;
+            box-sizing: border-box;
         }
     }
 }

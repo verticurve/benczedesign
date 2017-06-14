@@ -5,16 +5,14 @@ layout: gallery
 <div id="gallery-top-content" class="top-content">
     <h2>Galerie - {{page.gallery-name}}</h2>
 </div>
-<div class="bottom-content">{% for category in site.data[page.gallery-data] %}
-    <div class="gallery">
+<div class="bottom-content">{% for category in site.data[page.gallery-data] %}{%
+    assign basePath = '/img/gallery/' | append: {{page.gallery-folder}} | append: '/' | append: {{category.folder}} | append: '/small' %}{%
+    assign images = site.static_files | where_exp: "item", "item.path contains basePath" %}
+    <div class="gallery-card c{{ images | size }}">
         <h3>{{ category.title }}</h3>
-        <div class="gallery-table">{% 
-            assign basePath = '/img/gallery/' | append: {{page.gallery-folder}} | append: '/' | append: {{category.folder}} | append: '/small' %}{%
-            assign images = site.static_files | where_exp: "item", "item.path contains basePath" %}{%
+        <div class="gallery-img-container">{%
             for image in images %}
-            <div class="gallery-cell-item">
-                <img src="{{ image.path }}">
-            </div>{%
+            <img src="{{ image.path }}">{%
             endfor %}
         </div>
         <a class="more" href="#" onclick="openGallery({{category.folder}});">Mehr <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
