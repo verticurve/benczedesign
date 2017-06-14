@@ -9,13 +9,12 @@ layout: gallery
     <div class="gallery">
         <h3>{{ category.title }}</h3>
         <div class="gallery-table">{% 
-            for image in site.static_files %}{% 
-                assign basePath = '/img/gallery/' | append: {{page.gallery-folder}} | append: '/' | append: {{category.folder}} | append: '/small' %}{% 
-                if image.path contains basePath %}
+            assign basePath = '/img/gallery/' | append: {{page.gallery-folder}} | append: '/' | append: {{category.folder}} | append: '/small' %}{%
+            assign images = site.static_files | where_exp: "item", "item.path contains basePath" %}{%
+            for image in images %}
             <div class="gallery-cell-item">
                 <img src="{{ image.path }}">
-            </div>{% 
-                endif %}{%
+            </div>{%
             endfor %}
         </div>
         <a class="more" href="#" onclick="openGallery({{category.folder}});">Mehr <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
