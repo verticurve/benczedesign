@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
     {% include htmlhead.html %}
-    <link href="{{ site.github.url }}/css/photoswipe.css" rel="stylesheet" />
-    <link href="{{ site.github.url }}/css/default-skin/default-skin.css" rel="stylesheet" /> 
 </head>
 <body>
     {% include header.html %}
     <div id="content">
         {{ content }}
     </div>
-    {% include ga.html %}
+{% include scripts.html %}
+<script>
+  l("{{ site.github.url }}/css/photoswipe.css");
+  l("{{ site.github.url }}/css/default-skin/default-skin.css");
+</script>
 </body>
 </html>
