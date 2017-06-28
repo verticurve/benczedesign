@@ -12,10 +12,10 @@ layout: gallery
         <h3>{{ category.title }}</h3>
         <div class="gallery-img-container">{%
             for image in images %}
-            <img src="{{ image.path }}">{%
+            <a  onclick="openGallery({{category.folder}}, {{ forloop.index0 }});" title="{{ category.title }}"><img src="{{ image.path }}" alt="{{ category.title }}"></a>{%
             endfor %}
         </div>
-        <a class="more" href="#" onclick="openGallery({{category.folder}});">Mehr <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+        <a class="more" onclick="openGallery({{category.folder}}, 0);" title="{{ category.title }}">Mehr <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
     </div>{% endfor %}
 </div>
 

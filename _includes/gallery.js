@@ -1,7 +1,8 @@
-function openGallery(items) {
+function openGallery(items, index) {
     var pswpElement = document.querySelectorAll('.pswp')[0];
     var options = {
-        index: 0 
+        index: index,
+        history: false
     };
     // todo: sort should not be done on client side:
     var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items.sort(compare), options);
