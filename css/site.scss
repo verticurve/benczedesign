@@ -3,9 +3,12 @@
 
 @import "reset";
 
+$background-color: #F5F5F5;
 $primary-color: #571219;
 $header-content-xs-margin: 10px;
 $header-content-margin: 30px;
+
+$transition: 0.4s ease-in-out;
 
 /*Only needed form the template page*/
 .content {
@@ -34,7 +37,7 @@ $header-content-margin: 30px;
 
 body {
     font-size: 15px;
-    background-color: #F5F5F5;
+    background-color: $background-color;
     color: $primary-color;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -72,18 +75,41 @@ nav {
     margin-right: $header-content-xs-margin;
 }
 
+#content {
+    padding-top: 120px;
+    transition: padding-top $transition;
+
+    &.scrolled {
+        padding-top: 55px;
+    }
+}
+
 header {
     width: 100%;
+    z-index: 5;
+    position: fixed;
+    background-color: $background-color;
     
     #logo img {
         display: inline-block;
         height: 110px;
         vertical-align: middle;
+        transition: height $transition;
     }
 
     a {
         display: inline-block;
         line-height: 120px;
+        transition: line-height $transition;
+    }
+
+    &.scrolled {
+        #logo img {
+            height: 50px;
+        }
+        a {
+            line-height: 55px;
+        }
     }
 
     @media only screen and (min-width: 700px) {
@@ -92,6 +118,18 @@ header {
         }
         a {
             line-height: 220px;
+        }
+        #content {
+            padding-top: 220px;
+        }
+
+        &.scrolled {
+            #logo img {
+                height: 90px;
+            }
+            a {
+                line-height: 100px;
+            }
         }
     }
 
@@ -115,6 +153,16 @@ header {
 
     li {
         float: left;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    #content {
+        padding-top: 220px;
+
+        &.scrolled {
+            padding-top: 100px;
+        }
     }
 }
 

@@ -9,4 +9,24 @@
   c.property='stylesheet';c.type='text/css';document.getElementsByTagName('head')[0]
   .appendChild(c);};
   l('//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+  var i = function () {
+      window.addEventListener('scroll', function (e) {
+      var y = window.pageYOffset || document.documentElement.scrollTop,
+              l = 50,
+              header = document.querySelector('header'),
+              content = document.querySelector('#content');
+      if (y > l) {
+          header.classList.add('scrolled');
+          content.classList.add('scrolled');
+      } else {
+        if (header.classList.contains('scrolled')) {
+          header.classList.remove('scrolled');
+        }
+        if (content.classList.contains('scrolled')) {
+            content.classList.remove('scrolled');
+        }
+      }
+    });
+  };
+  window.onload = i();
 </script>
