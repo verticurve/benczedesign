@@ -53,6 +53,22 @@ header,
     border-bottom: 1px solid $primary-color;
 }
 
+footer {  
+    display: block;
+    font-size: 80%;
+
+    ul {
+        list-style-type: none;
+        padding: 7px;
+    }
+
+    li {
+        float: left;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
 #logo {
     display: block;
     float: left;
@@ -62,7 +78,8 @@ header,
 header:after,
 .header-content:after,
 .bottom-content:after,
-#contact-bottom-content h3.form:before {
+#contact-bottom-content h3.form:before,
+footer ul:after {
     clear: both;
     content: '';
     display: block;
@@ -167,7 +184,8 @@ header {
 }
 
 .header-content,
-.bottom-content {
+.bottom-content,
+.footer-content {
     width: 100%;
     margin: 0 auto;
     display: block;
@@ -175,9 +193,14 @@ header {
     box-sizing: border-box;
 }
 
+.footer-content  {
+    border-top: 1px solid #D6D6D6;
+}
+
 @media only screen and (min-width: 1000px) {
     .header-content,
-    .bottom-content {
+    .bottom-content,
+    .footer-content  {
         width: 90%;
         border-left: 1px solid #D6D6D6;
         border-right: 1px solid #D6D6D6;
@@ -186,7 +209,8 @@ header {
 
 @media only screen and (min-width: 1200px) {
     .header-content,
-    .bottom-content {
+    .bottom-content,
+    .footer-content  {
         width: 80%;
         max-width: 1250px;
     }
