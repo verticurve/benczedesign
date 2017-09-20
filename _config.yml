@@ -1,4 +1,5 @@
 title: Bencze Design
+description: Kleine Veränderung – grosse Wirkung! Sie planen den Umbau Ihres Zuhauses oder möchten ein einzelnes Zimmer verändern? Gerne berate ich Sie einmalig oder im Rahmen eines Gesamtprojektes.
 exclude: [run.bat, some.md, Gemfile, Gemfile.lock]
 sass:
   style: compressed
