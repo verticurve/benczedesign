@@ -1,18 +1,19 @@
 <header>
     <div class="header-content">
         <div id="logo">
-            <a href="/index.html">
-                <h1>
-                    <img src="/img/logo.png" title="Bencze Design" alt="Bencze Design"/>
-                </h1>
+            <a href="{% if page.lang == "hu" %}/hu{% endif %}/index.html">
+            <h1>
+                <img src="/img/logo.png" title="Bencze Design" alt="Bencze Design" />
+            </h1>
             </a>
         </div>
         <nav>
             <label for="menu-toggle"> ☰ </label><input type="checkbox" id="menu-toggle">
             <ul>
-                <li><a class="nav-link" href="/offer.html">Angebot</a></li>
-                <li><a class="nav-link" href="/gallery.html">Galerie</a></li>
-                <li><a class="nav-link" href="/contact.html">Kontakt</a></li>
+                <li><a class="nav-link" href="{% if page.lang == "hu" %}/hu{% endif %}/offer.html">{% if page.lang == "hu" %}K&iacute;n&aacute;lat{% else %}Angebot{% endif %}</a></li>
+                <li><a class="nav-link" href="{% if page.lang == "hu" %}/hu{% endif %}/gallery.html">{% if page.lang == "hu" %}Gal&eacute;ria{% else %}Galerie{% endif %}</a></li>
+                <li><a class="nav-link" href="{% if page.lang == "hu" %}/hu{% endif %}/contact.html">{% if page.lang == "hu" %}Kapcsolat{% else %}Kontakt{% endif %}</a></li>
+                <li><a class="nav-link" href="{% if page.lang == "hu" %}/index.html{% else %}/hu/index.html{% endif %}">{% if page.lang == "hu" %}Deutsch{% else %}Magyar{% endif %}</a></li>
             </ul>
         </nav>
     </div>

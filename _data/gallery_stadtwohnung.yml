@@ -1,11 +1,19 @@
 - folder: Wohnzimmer
-  title: Wohnzimmer
+  title:
+    de: Wohnzimmer
+    hu: Nappali
 
 - folder: Schlafzimmer
-  title: Schlafzimmer
+  title: 
+    de: Schlafzimmer
+    hu: H&aacute;l&oacute;szoba
 
 - folder: Kuche
-  title: K&#252;che
+  title: 
+    de: K&#252;che
+    hu: Konyha
 
 - folder: Entree
-  title: Entree
+  title: 
+    de: Entree
+    hu: El&odblac;szoba

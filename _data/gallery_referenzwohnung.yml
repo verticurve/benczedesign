@@ -1,27 +1,45 @@
 - folder: wohnzimmer
-  title: Wohnzimmer
+  title: 
+    de: Wohnzimmer
+    hu: Nappali
   
 - folder: esszimmer
-  title: Esszimmer-K&#252;che
+  title: 
+    de: Esszimmer-K&#252;che
+    hu: "&Eacute;tkez&odblac;-Konyha"
 
 - folder: jugend
-  title: Jugendzimmer
+  title: 
+    de: Jugendzimmer
+    hu: Gyerekszoba
 
 - folder: schlaf
-  title: Schlafzimmer
+  title: 
+    de: Schlafzimmer
+    hu: H&aacute;l&oacute;szoba
 
 - folder: buro
-  title: B&#252;ro-G&#228;stezimmer
+  title: 
+    de: B&#252;ro-G&#228;stezimmer
+    hu: Dolgoz&oacute;-vend&eacute;gszoba
 
 - folder: entree
-  title: Entree-Gang
+  title: 
+    de: Entree-Gang
+    hu: El&odblac;szoba
 
 - folder: bad
-  title: Bad, Dusche
+  title: 
+    de: Bad, Dusche
+    hu: F&uuml;rd&odblac;
 
 - folder: hobby
-  title: Hobby, TV Raum
+  title: 
+    de: Hobby, TV Raum
+    hu: Hobby, TV szoba
 
 - folder: sitzplatz
-  title: Sitzplatz
+  title: 
+    de: Sitzplatz
+    hu: Terasz
 
