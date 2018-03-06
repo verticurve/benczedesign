@@ -53,7 +53,7 @@ header,
     border-bottom: 1px solid $primary-color;
 }
 
-footer {  
+footer {
     display: block;
     font-size: 80%;
 
@@ -98,6 +98,14 @@ nav {
     margin-right: $header-content-xs-margin;
 }
 
+nav label {
+    display: none;
+}
+
+#menu-toggle {
+    display: none;
+}
+
 #content {
     padding-top: 120px;
     transition: padding-top $transition;
@@ -112,7 +120,7 @@ header {
     z-index: 5;
     position: fixed;
     background-color: $background-color;
-    
+
     #logo img {
         display: inline-block;
         height: 110px;
@@ -130,6 +138,7 @@ header {
         #logo img {
             height: 50px;
         }
+
         a {
             line-height: 55px;
         }
@@ -139,9 +148,11 @@ header {
         #logo img {
             height: 180px;
         }
+
         a {
             line-height: 220px;
         }
+
         #content {
             padding-top: 220px;
         }
@@ -150,6 +161,7 @@ header {
             #logo img {
                 height: 90px;
             }
+
             a {
                 line-height: 100px;
             }
@@ -163,6 +175,7 @@ header {
         padding: 0 5px;
         text-transform: uppercase;
     }
+
     a.nav-link:hover {
         background: $primary-color;
         color: #fffff0;
@@ -199,24 +212,24 @@ header {
     box-sizing: border-box;
 }
 
-.footer-content  {
+.footer-content {
     border-top: 1px solid #D6D6D6;
 }
 
 @media only screen and (min-width: 1000px) {
     .header-content,
     .bottom-content,
-    .footer-content  {
+    .footer-content {
         width: 90%;
         border-left: 1px solid #D6D6D6;
         border-right: 1px solid #D6D6D6;
-    }    
+    }
 }
 
 @media only screen and (min-width: 1200px) {
     .header-content,
     .bottom-content,
-    .footer-content  {
+    .footer-content {
         width: 80%;
         max-width: 1250px;
     }
@@ -235,30 +248,83 @@ header {
     opacity: 0.8;
 }
 
-@media only screen and (min-width: 700px) {    
+@media only screen and (min-width: 700px) {
     .bottom-content {
         padding: 0 50px 20px 50px;
     }
+
     #contact-bottom-content ul {
         margin-top: 30px;
     }
+
     header {
         #logo {
             margin-left: $header-content-margin;
         }
+
         nav {
             margin-right: $header-content-margin;
         }
+
         a.nav-link {
             padding: 0 16px;
         }
     }
+
     .top-content h2 {
         position: absolute;
         bottom: 20px;
         left: 20px;
         font-size: 40px;
         opacity: 0.8;
+    }
+}
+
+@media all and (max-width: 700px) and (min-width: 0px) {
+    nav label {
+        display: block;
+        line-height: 120px;
+        font-size: 26px;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+        color: $primary-color;
+        cursor: pointer;
+    }
+
+    nav label:hover {
+        background: $primary-color;
+        color: #fffff0;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav li {
+        width: 100%;
+        border-bottom: 1px solid $primary-color;
+    }
+
+    nav li:first-child {
+        border-top: 1px solid $primary-color;
+    }
+
+    nav li a.nav-link {
+        line-height: 50px;
+        background: $background-color;
+        padding-left: 20px;
+    }
+
+    #menu-toggle:checked + ul {
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 100%;
+    }
+
+    nav label:active ul {
+        //   display: none;
     }
 }
 
@@ -313,9 +379,17 @@ header {
 }
 
 @keyframes chg_bg {
-    0%, 30%    {background-image: url(../img/gallery/referenzwohnung/esszimmer/large/1600x1067/EZ1.jpg);}
-    33%, 63%   {background-image: url(../img/gallery/referenzwohnung/wohnzimmer/large/1600x1067/WOZ1.jpg);}
-    66%, 99%   {background-image: url(../img/gallery/referenzwohnung/schlaf/large/1600x1067/SchZ3.jpg);}
+    0%, 30% {
+        background-image: url(../img/gallery/referenzwohnung/esszimmer/large/1600x1067/EZ1.jpg);
+    }
+
+    33%, 63% {
+        background-image: url(../img/gallery/referenzwohnung/wohnzimmer/large/1600x1067/WOZ1.jpg);
+    }
+
+    66%, 99% {
+        background-image: url(../img/gallery/referenzwohnung/schlaf/large/1600x1067/SchZ3.jpg);
+    }
 }
 
 #offer-top-content {
@@ -399,7 +473,7 @@ header {
     }
 
     @media only screen and (min-width: 800px) {
-        $img-width: 33%;        
+        $img-width: 33%;
 
         &.c2 {
             $img-margin: 25% - $img-width / 2;
@@ -410,6 +484,7 @@ header {
                 width: $img-width;
                 margin: 0 $img-margin;
             }
+
             a:nth-child(2) {
                 display: block;
             }
@@ -422,6 +497,7 @@ header {
                 margin-left: $img-margin + 2%;
             }
         }
+
         &.c1 {
             width: 50%;
 
@@ -448,7 +524,7 @@ header {
     a.more {
         margin-bottom: 20px;
     }
-    
+
     .gallery-img-container {
         width: 100%;
         margin-top: 30px;
@@ -466,16 +542,18 @@ header {
     width: 100%;
     display: inline-block;
 }
+
 .profile-img-container {
     display: block;
 }
 
 
-@media only screen and (min-width: 600px) { 
+@media only screen and (min-width: 600px) {
     #contact-bottom-content {
-        .text{
+        .text {
             width: 70%;
         }
+
         .profile-img-container {
             float: right;
             width: 30%
@@ -483,7 +561,7 @@ header {
     }
 }
 
-@media only screen and (min-width: 700px) {   
+@media only screen and (min-width: 700px) {
     .text {
         width: 70%;
     }
@@ -502,6 +580,7 @@ header {
 .text-center {
     text-align: center;
 }
+
 img.profile {
     max-width: 200px;
 }
@@ -519,7 +598,7 @@ img.profile {
     h3.form {
         margin-bottom: 30px;
         margin-top: 30px;
-    }    
+    }
 
     input,
     textarea {
