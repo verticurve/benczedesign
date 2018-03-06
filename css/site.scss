@@ -68,10 +68,13 @@ footer {
         padding-right: 10px;
     }
 
+    li a {
+        line-height:50px;
+    }
+
     .fb-link {
         display: inline-block;
         font-size: 16px;
-        margin-top: -2px;
     }
 }
 
@@ -214,15 +217,19 @@ header {
 
 .footer-content {
     border-top: 1px solid #D6D6D6;
+    background: #F5F5F5;
 }
 
 @media only screen and (min-width: 1000px) {
     .header-content,
+    .bottom-content {
+        border-left: 1px solid #D6D6D6;
+        border-right: 1px solid #D6D6D6;
+    }
+    .header-content,
     .bottom-content,
     .footer-content {
         width: 90%;
-        border-left: 1px solid #D6D6D6;
-        border-right: 1px solid #D6D6D6;
     }
 }
 
