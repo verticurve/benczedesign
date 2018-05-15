@@ -8,6 +8,12 @@ $primary-color: #571219;
 $header-content-xs-margin: 10px;
 $header-content-margin: 30px;
 
+$bottom-content-side-padding: 10px;
+$bottom-content-side-padding-minus: -$bottom-content-side-padding;
+
+$bottom-content-side-padding-large: 50px;
+$bottom-content-side-padding-large-minus: -$bottom-content-side-padding-large;
+
 $transition: 0.4s ease-in-out;
 
 /*Only needed form the template page*/
@@ -244,7 +250,7 @@ header {
 
 .bottom-content {
     line-height: 1.5em;
-    padding: 0 10px 20px 10px;
+    padding: 0 $bottom-content-side-padding 20px $bottom-content-side-padding;
 }
 
 .top-content h2 {
@@ -257,7 +263,7 @@ header {
 
 @media only screen and (min-width: 700px) {
     .bottom-content {
-        padding: 0 50px 20px 50px;
+        padding: 0 $bottom-content-side-padding-large 20px $bottom-content-side-padding-large;
     }
 
     #contact-bottom-content ul {
@@ -438,6 +444,75 @@ nav li:last-child{
 
 #offer-bottom-content ul {
     margin-top: 5px;
+    padding-top: 10px;
+}
+
+#offer-bottom-content {
+    section {
+        display: none;
+        padding: 20px $bottom-content-side-padding 0;
+        border-top: 1px solid $primary-color;
+        margin: 0 $bottom-content-side-padding-minus;
+      }
+
+      @media only screen and (min-width: 700px) {
+        section {
+            padding: 20px $bottom-content-side-padding-large 0;
+            margin: 0 $bottom-content-side-padding-large-minus;
+          }
+      }
+      
+      h4{
+        font-size: 20px;
+      }
+
+    li{
+        text-indent: -23px;
+        padding-left: 23px;
+    }
+
+
+      input {
+        display: none;
+      }
+      
+      label {
+        display: inline-block;
+        margin: 20px 0 -1px;
+        padding: 15px 5px;
+        font-weight: bold;
+        text-align: center;
+        color: #bbb;
+        border: 1px solid transparent;
+      }
+
+      @media only screen and (min-width: 700px) {
+        label {
+            padding: 15px 25px;
+          }
+      }
+      
+      label:before {
+        margin-right: 10px;
+      }
+            
+      label:hover {
+        color: $primary-color;
+        cursor: pointer;
+      }
+      
+      input:checked + label {
+        color: $primary-color;
+        border: 1px solid $primary-color;
+        border-top: 1px solid $primary-color;
+        border-bottom: 1px solid #F2F2F2;
+      }
+      
+      #tab1:checked ~ #content1,
+      #tab2:checked ~ #content2,
+      #tab3:checked ~ #content3 {
+        display: block;
+      }
 }
 
 .gallery-card {
