@@ -456,6 +456,10 @@ nav li:last-child{
 }
 
 #offer-bottom-content {
+    .bold {
+        font-weight: bold;
+    }
+
     .accordion {
         margin: 0 auto;
 
@@ -545,6 +549,7 @@ nav li:last-child{
 
     h4 {
         font-size: 20px;
+        padding-top: 40px;
     }
 
     input {
