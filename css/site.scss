@@ -447,6 +447,14 @@ nav li:last-child{
     padding-top: 10px;
 }
 
+#front-bottom-content,
+#offer-bottom-content {
+    li {
+        text-indent: -23px;
+        padding-left: 23px;
+    }
+}
+
 #offer-bottom-content {
     section {
         display: none;
@@ -465,12 +473,6 @@ nav li:last-child{
       h4{
         font-size: 20px;
       }
-
-    li{
-        text-indent: -23px;
-        padding-left: 23px;
-    }
-
 
       input {
         display: none;
