@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Angebot - Bencze Design
+home-staging-title: Galerie
 ---
 
 <div id="offer-top-content" class="top-content">
@@ -74,6 +75,7 @@ title: Angebot - Bencze Design
             <li>Negative Gefühle wie Unwohlsein verhindern den Kaufwunsch</li>
 
         </ul>
+        {% include gallery-homestaging.html %}
         <div class="accordion">
             <div class="option">
                 <input type="checkbox" id="toggle1" class="toggle" />
@@ -114,7 +116,8 @@ title: Angebot - Bencze Design
                     <p>Preise</p>
                     <ul>
                         <li>Erstbesichtigung und Beratung sind kostenlos.</li>
-                        <li>Je nach Grösse und Zustand der Immobilie sehr variierend. Einrichtung z.B. einer 31/2-Zimmerwohnung (inkl.
+                        <li>
+                            Je nach Grösse und Zustand der Immobilie sehr variierend. Einrichtung z.B. einer 31/2-Zimmerwohnung (inkl.
                             Auf-/und Abbau und 3-monatiger Möbelmiete) ab CHF 3'000,-
                         </li>
                         <li>Exklusive Einrichtung mit hochwertiger Möblierung ab CHF 8'000,-</li>
@@ -182,7 +185,7 @@ title: Angebot - Bencze Design
                     <ul>
                         <li>Pauschal (Dauer: 2 Stunden) CHF 350,-</li>
                     </ul>
-                                        
+
                     <h4>Zusatzleistungen</h4>
                     <ul>
                         <li>Mietaccessoires</li>
@@ -337,3 +340,8 @@ title: Angebot - Bencze Design
 
     </section>
 </div>
+{% include scripts.html %}
+<script>
+    l("/css/photoswipe.min.css");
+    l("/css/default-skin/default-skin.min.css");
+</script>

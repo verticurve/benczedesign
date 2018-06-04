@@ -1,12 +1,14 @@
 ---
 layout: gallery
 title: Galerie - Bencze Design
+home-staging-title: Home Staging
 ---
 
 <div id="gallery-top-content" class="top-content">
     <h2>Galerie</h2>
 </div>
 <div class="bottom-content">
+    {% include gallery-homestaging.html %}
     <div class="gallery-card c2">
         <h3>Referenzwohnung</h3>
         <div class="gallery-img-container">
@@ -24,3 +26,8 @@ title: Galerie - Bencze Design
         <a class="more" href="/gallery-stadtwohnung.html" title="Stadtwohnung">Mehr <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
     </div>
 </div>
+{% include scripts.html %}
+<script>
+    l("/css/photoswipe.min.css");
+    l("/css/default-skin/default-skin.min.css");
+</script>

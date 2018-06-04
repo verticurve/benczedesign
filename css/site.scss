@@ -418,7 +418,7 @@ nav li:last-child{
 }
 
 #offer-top-content {
-    background-image: url(../img/plan2.jpg);
+    background-image: url(../img/offer.jpg);
 }
 
 #gallery-top-content {
@@ -462,6 +462,7 @@ nav li:last-child{
 
     .accordion {
         margin: 0 auto;
+        clear: both;
 
 
         .toggle {
@@ -595,12 +596,25 @@ nav li:last-child{
     }
 }
 
+#offer-bottom-content .gallery-card {
+
+    &.c4,
+    &.c2,
+    &.c1 {
+
+        h3 {
+            margin-left: 0;
+        }
+    }
+}
+
 .gallery-card {
     float: left;
 
     $img-xs-width: 95%;
     $img-xs-margin: 50% - $img-xs-width / 2;
 
+    &.c4,
     &.c2,
     &.c1 {
         width: 100%;
@@ -619,14 +633,32 @@ nav li:last-child{
         }
     }
 
-    a:nth-child(2) {
-        display: none;
+    &.c4 {
+        .gallery-img-container a:nth-child(4),
+        .gallery-img-container a:nth-child(3) {
+            display: none;
+        }
+
+        .gallery-img-container a:nth-child(2) img {
+            margin-top: 20px;
+        }
     }
+
+    &.c2,
+    &.c1 {
+        .gallery-img-container a:nth-child(4),
+        .gallery-img-container a:nth-child(3),
+        .gallery-img-container a:nth-child(2) {
+            display: none;
+        }
+    }
+
 
     @media only screen and (min-width: 700px) {
         $img-sm-width: 85%;
         $img-sm-margin: 50% - $img-sm-width / 2;
 
+        &.c4,
         &.c2,
         &.c1 {
             width: 100%;
@@ -649,6 +681,7 @@ nav li:last-child{
     @media only screen and (min-width: 800px) {
         $img-width: 33%;
 
+        &.c4,
         &.c2 {
             $img-margin: 25% - $img-width / 2;
 
@@ -659,7 +692,9 @@ nav li:last-child{
                 margin: 0 $img-margin;
             }
 
-            a:nth-child(2) {
+            .gallery-img-container a:nth-child(4),
+            .gallery-img-container a:nth-child(3),
+            .gallery-img-container a:nth-child(2) {
                 display: block;
             }
 
@@ -669,6 +704,17 @@ nav li:last-child{
 
             a.more {
                 margin-left: $img-margin + 2%;
+            }
+        }
+
+        &.c4 {
+            .gallery-img-container a:nth-child(2) img {
+                margin-top: 0;
+            }
+
+            .gallery-img-container a:nth-child(4) img,
+            .gallery-img-container a:nth-child(3) img{
+                margin-top: 40px;
             }
         }
 
